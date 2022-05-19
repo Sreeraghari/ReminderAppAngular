@@ -1,0 +1,27 @@
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup">
+        <form [formGroup]="eventForm" (ngSubmit)="addEvent()">
+            <label for="chk" aria-hidden="true">Save your Events</label>
+
+            <div style="color: red; text-align: center;" *ngIf="(this.eventForm.get('date')?.touched ||this.eventForm.get('date')?.dirty)&&this.eventForm.get('date')?.errors">invalid date</div>
+
+
+            <input type="date" name="date" formControlName="date" placeholder="Enter Date" required="">
+
+
+                <div style="color: red; text-align: center;" *ngIf="(this.eventForm.get('descr')?.touched ||this.eventForm.get('descr')?.dirty)&&this.eventForm.get('descr')?.errors">invalid description</div>
+
+
+           <textarea name="" id="" cols="30" formControlName="descr"rows="10"></textarea> 
+
+
+
+            
+                <button>Add Event</button>
+            <button routerLink="/event">View Event</button>
+
+        </form>
+    </div>
+</div>

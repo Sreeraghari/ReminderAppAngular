@@ -1,0 +1,28 @@
+<div class="ss">
+    <h1 style="color: rgb(240, 237, 237); text-align: center;">Events</h1>
+    <div>
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+
+
+                    <th style="color: rgb(240, 237, 237); bold">Date</th>
+
+
+                    <th style="color: rgb(240, 237, 237);">Event Name</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of event">
+
+                    <td style="color: rgb(218, 16, 16);">{{t.date}}</td>
+                    <td style="color: rgb(218, 16, 16);">{{t.descr}}</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
